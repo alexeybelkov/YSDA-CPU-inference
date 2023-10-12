@@ -1,0 +1,6 @@
+highest_None_1_330, time:, 0.24, acc, 0.914
+highest_None_4_330, time:, 0.056, acc, 0.914
+highest_x86_1_109, time:, 0.158, acc, 0.099
+highest_x86_4_109, time:, 0.175, acc, 0.099
+highest_fbgemm_1_109, time:, 0.177, acc, 0.099
+highest_fbgemm_4_109, time:, 0.039, acc, 0.099
