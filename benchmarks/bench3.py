@@ -71,7 +71,7 @@ batch_size = 1
 
 tf = transforms()
 trainset = Dataset(datasource=imagenette_train, transforms=tf)
-validset = Dataset(datasource=imagenette_valid, transforms=tf, ramming=True)
+validset = Dataset(datasource=imagenette_valid, transforms=tf, ramming=False)
 valid_dataloader = torch.utils.data.DataLoader(validset, num_workers=num_workers, batch_size=batch_size, shuffle=True)
 
 
@@ -121,15 +121,19 @@ num_workers = 1
 
 
 def run_epoch(model, valid_dataloader, limit=2**32):
+    T = 0.0
     Y = []
     Y_hat = []
     for i, (x, y) in enumerate(valid_dataloader):
         if i >= limit:
             break
         Y.append(y.ravel())
-        y_hat = model(x).argmax(-1).ravel()
-        Y_hat.append(y_hat)
-    return accuracy_score(np.array(Y).ravel(), np.array(Y_hat).ravel())
+        start = time.time()
+        y_hat = model(x)
+        end = time.time()
+        Y_hat.append(y_hat.argmax(-1))
+        T += end - start
+    return accuracy_score(np.array(Y).ravel(), np.array(Y_hat).ravel()), T
 
 
 limit = 2**32
@@ -148,10 +152,9 @@ with torch.no_grad():
             prepared_model = prepare_fx(model, qconfig_mapping, example_inputs=examples_inputs)
             model = convert_fx(prepared_model)
         key  = '_'.join(map(str, [prec, quant, bs, round(nbytes(model))]))
-        start = time.time()
-        acc = run_epoch(model, valid_dataloader, limit)
-        end = time.time()
-        T[key] = np.round((end - start) / (min(limit, len(valid_dataloader)) * bs), 3)
+        acc, t = run_epoch(model, valid_dataloader, limit)
+        
+        T[key] = np.round(t / (min(limit, len(valid_dataloader)) * bs), 3)
         accuracy[key] = np.round(acc, 3)
         gc.collect()
 
