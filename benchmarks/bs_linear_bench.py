@@ -4,9 +4,9 @@ import os
 # https://github.com/pytorch/pytorch/issues/19001
 
 print('DEFAULT:', torch.get_num_threads(), torch.get_num_interop_threads())
-torch.set_num_threads(1), torch.set_num_interop_threads(1)
-os.environ['OMP_NUM_THREADS'] = '1'
-os.environ['MKL_NUM_THREADS'] = '1'
+# torch.set_num_threads(1), torch.set_num_interop_threads(1)
+# os.environ['OMP_NUM_THREADS'] = '1'
+# os.environ['MKL_NUM_THREADS'] = '1'
 print(torch.get_num_threads(), torch.get_num_interop_threads())
 print(torch.__config__.parallel_info())
 
@@ -174,6 +174,7 @@ with torch.inference_mode():
             elif item.key == 'aten::linear':
                 pair[1] = item.cpu_time_total
         times.append(pair)
+        batch_size *= 2
 
 quantized_time = [t[0] for t in times]
 float_time = [t[1] for t in times]
@@ -186,5 +187,5 @@ plt.legend()
 plt.title('quatized::linear vs aten::linear')
 plt.xlabel('batch_size')
 plt.ylabel('microseconds')
-plt.savefig('../bench.jpg')
+plt.savefig('../par_bs_bench.jpg')
         
