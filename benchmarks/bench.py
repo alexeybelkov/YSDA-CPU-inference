@@ -110,12 +110,9 @@ torch_generator = torch.Generator()
 torch_generator.manual_seed(0xBADCAFFE)
 
 
-examples_inputs = [validset[i][0] for i in range(len(validset))]
+# examples_inputs = [validset[i][0] for i in range(len(validset) // 1000)]
 
-
-matmul_precision = ['highest']#['medium', 'high', 'highest']
-quantization = ['None', 'x86', 'fbgemm']
-mixed_precision = ['']
+quantization = ['x86', 'fbgemm']
 batch_sizes = [1, 4]
 num_workers = 1
 
@@ -127,35 +124,43 @@ def run_epoch(model, valid_dataloader, limit=2**32):
     for i, (x, y) in enumerate(valid_dataloader):
         if i >= limit:
             break
-        Y.append(y.ravel())
+        Y.append(y.numpy().ravel())
         start = time.time()
         y_hat = model(x)
         end = time.time()
-        Y_hat.append(y_hat.argmax(-1))
+        Y_hat.append(y_hat.argmax(-1).numpy().ravel())
+
         T += end - start
-    return accuracy_score(np.array(Y).ravel(), np.array(Y_hat).ravel()), T
+    return accuracy_score(np.concatenate(Y), np.concatenate(Y_hat)), T
 
 
-limit = 2**32
+limit = 128
 T = {}
 accuracy = {}
-with torch.no_grad():
-    for prec, quant, bs in tqdm(product(matmul_precision, quantization, batch_sizes)):
+
+def calibrate(model, dataloader):
+    with torch.inference_mode():
+        for x, y in dataloader:
+            model(x)
+
+with torch.inference_mode():
+    for quant, bs in tqdm(product(quantization, batch_sizes)):
         valid_dataloader = torch.utils.data.DataLoader(validset, num_workers=num_workers, 
                                                        batch_size=batch_size, shuffle=True, 
                                                        worker_init_fn=fix_seed, generator=torch_generator)
         model = torchvision.models.vit_b_16(weights=torchvision.models.ViT_B_16_Weights.IMAGENET1K_V1).eval()
-        torch.set_float32_matmul_precision(prec)
         if quant != 'None':
             torch.backends.quantized.engine = quant
             qconfig_mapping = get_default_qconfig_mapping(quant)
-            prepared_model = prepare_fx(model, qconfig_mapping, example_inputs=examples_inputs)
-            model = convert_fx(prepared_model)
-        key  = '_'.join(map(str, [prec, quant, bs, round(nbytes(model))]))
+            prepared_model = prepare_fx(model, qconfig_mapping, example_inputs=next(iter(valid_dataloader))[0])
+            calibrate(prepared_model, valid_dataloader)
+            model = convert_fx(prepared_model, qconfig_mapping=qconfig_mapping)
+        key  = '_'.join(map(str, [quant, bs, round(nbytes(model))]))
         acc, t = run_epoch(model, valid_dataloader, limit)
         
         T[key] = np.round(t / (min(limit, len(valid_dataloader)) * bs), 3)
         accuracy[key] = np.round(acc, 3)
+        print(key, 'time:', T[key], 'acc', accuracy[key])
         gc.collect()
 
 
