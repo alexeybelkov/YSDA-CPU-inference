@@ -1,6 +1,3 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "python.formatting.provider": "none"
+    "cmake.sourceDirectory": "/home/alexey/YSDA/YSDA-CPU-inference/cpp"
 }

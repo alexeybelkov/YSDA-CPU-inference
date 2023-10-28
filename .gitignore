@@ -1,2 +1,6 @@
 tiny-imagenet-200*
 tiny-imagenet-200.zip
+cpp/libtorch
+cpp/build
+.vscode
+__pycache__
