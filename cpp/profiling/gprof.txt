@@ -1,0 +1,518 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.01     0.00   275374     0.00     0.00  c10::storage_t<at::Tensor>::storage_t<at::Tensor>(at::Tensor&&)
+  0.00      0.01     0.00       25     0.00     0.00  c10::TensorOptions::set_requires_grad(c10::optional<bool>) &
+  0.00      0.01     0.00        8     0.00     0.00  c10::fromIntArrayRefSlow(c10::ArrayRef<long>)
+  0.00      0.01     0.00        8     0.00     0.00  c10::optional<c10::Device>::optional(c10::nullopt_t)
+  0.00      0.01     0.00        7     0.00     0.00  torch::randn(c10::ArrayRef<long>, c10::TensorOptions)
+  0.00      0.01     0.00        6     0.00     0.00  c10::detail::_str_wrapper<char const*, long const&>::call(char const* const&, long const&)
+  0.00      0.01     0.00        6     0.00     0.00  c10::optional<bool>::optional<bool const&, false>(bool const&)
+  0.00      0.01     0.00        5     0.00     0.00  at::TensorBase::~TensorBase()
+  0.00      0.01     0.00        5     0.00     0.00  c10::Scalar::~Scalar()
+  0.00      0.01     0.00        4     0.00     0.00  at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>)
+  0.00      0.01     0.00        4     0.00     0.00  at::AutoDispatchBelowADInplaceOrView::~AutoDispatchBelowADInplaceOrView()
+  0.00      0.01     0.00        4     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::intrusive_ptr(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl> const&)
+  0.00      0.01     0.00        4     0.00     0.00  c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reset_()
+  0.00      0.01     0.00        4     0.00     0.00  c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*)
+  0.00      0.01     0.00        4     0.00     0.00  c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reclaim(c10::intrusive_ptr_target*)
+  0.00      0.01     0.00        4     0.00     0.00  decltype(auto) c10::str<char [92], unsigned long>(char const (&) [92], unsigned long const&)
+  0.00      0.01     0.00        4     0.00     0.00  c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant()
+  0.00      0.01     0.00        4     0.00     0.00  c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long)
+  0.00      0.01     0.00        4     0.00     0.00  c10::TensorOptions::dtype_opt() const
+  0.00      0.01     0.00        4     0.00     0.00  c10::SymInt::toSymNodeImplUnowned() const
+  0.00      0.01     0.00        4     0.00     0.00  c10::optional<bool>::operator*() &
+  0.00      0.01     0.00        3     0.00     0.00  c10::intrusive_ptr_target::intrusive_ptr_target()
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorImpl::set_allow_tensor_metadata_change(bool)
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorOptions::TensorOptions()
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_()
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reset_()
+  0.00      0.01     0.00        2     0.00     0.00  c10::VariableVersion::VersionCounter::VersionCounter(unsigned int)
+  0.00      0.01     0.00        2     0.00     0.00  c10::VariableVersion::VersionCounter::~VersionCounter()
+  0.00      0.01     0.00        2     0.00     0.00  c10::VariableVersion::VersionCounter::~VersionCounter()
+  0.00      0.01     0.00        2     0.00     0.00  c10::VariableVersion::VariableVersion(unsigned int)
+  0.00      0.01     0.00        2     0.00     0.00  c10::raw::intrusive_ptr::incref(c10::intrusive_ptr_target*)
+  0.00      0.01     0.00        2     0.00     0.00  decltype(auto) c10::str<char [154]>(char const (&) [154])
+  0.00      0.01     0.00        2     0.00     0.00  c10::Device::validate()
+  0.00      0.01     0.00        2     0.00     0.00  c10::Scalar::v_t::v_t()
+  0.00      0.01     0.00        2     0.00     0.00  c10::SymInt::check_range(long)
+  0.00      0.01     0.00        2     0.00     0.00  c10::detail::_str_wrapper<char const*, unsigned long const&>::call(char const* const&, unsigned long const&)
+  0.00      0.01     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t)
+  0.00      0.01     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::operator->()
+  0.00      0.01     0.00        2     0.00     0.00  c10::optional<c10::ScalarType>::optional(c10::nullopt_t)
+  0.00      0.01     0.00        2     0.00     0.00  c10::isComplexType(c10::ScalarType)
+  0.00      0.01     0.00        2     0.00     0.00  c10::isFloatingType(c10::ScalarType)
+  0.00      0.01     0.00        2     0.00     0.00  torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge)
+  0.00      0.01     0.00        2     0.00     0.00  caffe2::TypeMeta::toScalarType()
+  0.00      0.01     0.00        2     0.00     0.00  caffe2::TypeMeta::TypeMeta(unsigned short)
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorOptions::device_opt() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorOptions::layout_opt() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorOptions::requires_grad(c10::optional<bool>) const
+  0.00      0.01     0.00        2     0.00     0.00  c10::TensorOptions::pinned_memory_opt() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::use_count() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator bool() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::detail::intrusive_target_default_null_type<c10::TensorImpl> >::get() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::operator bool() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::VariableVersion::unique() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::Device::is_cpu() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::ArrayRef<long>::data() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::initialized() const
+  0.00      0.01     0.00        2     0.00     0.00  caffe2::TypeMeta::isScalarType() const
+  0.00      0.01     0.00        2     0.00     0.00  c10::detail::ivalue_to_const_ref_overload_return<at::Tensor>::type c10::IValue::to<at::Tensor>() const &
+  0.00      0.01     0.00        1     0.00     0.00  at::TensorBase::TensorBase(at::TensorBase const&)
+  0.00      0.01     0.00        1     0.00     0.00  c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base(caffe2::TypeMeta const&)
+  0.00      0.01     0.00        1     0.00     0.00  at::Tensor c10::IValue::to<at::Tensor>() &&
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 100.00% of 0.01 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+-----------------------------------------------
+[2]      0.0    0.00    0.00       6+8       <cycle 1 as a whole> [2]
+                0.00    0.00       8             c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+                0.00    0.00       4             c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+-----------------------------------------------
+[3]      0.0    0.00    0.00      29+36      <cycle 2 as a whole> [3]
+                0.00    0.00      25             c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+                0.00    0.00       8             c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+-----------------------------------------------
+                0.00    0.00  550748/550748      c10::storage_t<at::Tensor>::storage_t<at::Tensor>(at::Tensor&&) [12]
+-----------------------------------------------
+[12]     0.0    0.00    0.00  275374         c10::storage_t<at::Tensor>::storage_t<at::Tensor>(at::Tensor&&) [12]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00   45593/45593       c10::optional_base<at::Tensor>::optional_base(at::Tensor&&) [144]
+-----------------------------------------------
+-----------------------------------------------
+                                   8             c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+                0.00    0.00       2/29          at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+                0.00    0.00       2/29          c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [59]
+[16]     0.0    0.00    0.00      25         c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+                                   2             c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+-----------------------------------------------
+                                   4             c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+                0.00    0.00       2/29          c10::UndefinedTensorImpl::singleton() [162]
+                0.00    0.00       2/29          torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+                0.00    0.00       4/29          at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+                0.00    0.00       4/29          c10::VariableVersion::~VariableVersion() [155]
+                0.00    0.00       5/29          c10::Scalar::~Scalar() [28]
+-----------------------------------------------
+                0.00    0.00       2/15          c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+                0.00    0.00       2/15          c10::optional<c10::Layout>::optional(c10::nullopt_t) [259]
+                0.00    0.00       4/15          decltype(auto) c10::str<char [82]>(char const (&) [82]) [196]
+                0.00    0.00       4/15          c10::intrusive_ptr_target::~intrusive_ptr_target() [175]
+-----------------------------------------------
+                                  11             c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+-----------------------------------------------
+                                   2             c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+                0.00    0.00       2/6           decltype(auto) c10::detail::torchCheckMsgImpl<char [69], long>(char const*, char const (&) [69], long const&) [230]
+                0.00    0.00       2/6           c10::VariableVersion::VersionCounter::VersionCounter(unsigned int) [49]
+[20]     0.0    0.00    0.00       8         c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::operator->() [60]
+                                   2             c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+-----------------------------------------------
+                                   2             c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+                0.00    0.00       2/29          c10::UndefinedTensorImpl::singleton() [162]
+                0.00    0.00       2/29          at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+                0.00    0.00       2/29          torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[21]     0.0    0.00    0.00       8         c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+                                   8             c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+-----------------------------------------------
+                0.00    0.00       1/7           main [9]
+                0.00    0.00       2/7           c10::TensorOptions::layout_opt() const [68]
+                0.00    0.00       4/7           c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reclaim(c10::intrusive_ptr_target*) [34]
+[22]     0.0    0.00    0.00       7         torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+                0.00    0.00       4/4           at::AutoDispatchBelowADInplaceOrView::~AutoDispatchBelowADInplaceOrView() [30]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::initialized() const [79]
+-----------------------------------------------
+                0.00    0.00       6/6           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+-----------------------------------------------
+                0.00    0.00       2/6           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+                0.00    0.00       4/6           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::use_count() const [351]
+[24]     0.0    0.00    0.00       6         c10::detail::_str_wrapper<char const*, long const&>::call(char const* const&, long const&) [24]
+                0.00    0.00       2/4           c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [37]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reset_() [32]
+-----------------------------------------------
+                0.00    0.00       2/6           c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [36]
+[25]     0.0    0.00    0.00       6         c10::optional<bool>::optional<bool const&, false>(bool const&) [25]
+-----------------------------------------------
+                0.00    0.00       6/6           c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reset_() [32]
+-----------------------------------------------
+                0.00    0.00       3/5           main [9]
+[27]     0.0    0.00    0.00       5         at::TensorBase::~TensorBase() [27]
+                0.00    0.00       5/5           c10::Scalar::~Scalar() [28]
+-----------------------------------------------
+                0.00    0.00       5/5           at::TensorBase::~TensorBase() [27]
+[28]     0.0    0.00    0.00       5         c10::Scalar::~Scalar() [28]
+-----------------------------------------------
+                0.00    0.00       4/4           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[29]     0.0    0.00    0.00       4         at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [59]
+                0.00    0.00       2/29          c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+                0.00    0.00       2/29          c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+-----------------------------------------------
+                0.00    0.00       4/4           torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+[30]     0.0    0.00    0.00       4         at::AutoDispatchBelowADInplaceOrView::~AutoDispatchBelowADInplaceOrView() [30]
+-----------------------------------------------
+                0.00    0.00       2/4           c10::detail::_str_wrapper<char const*, unsigned long const&>::call(char const* const&, unsigned long const&) [58]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator bool() const [72]
+[31]     0.0    0.00    0.00       4         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::intrusive_ptr(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl> const&) [31]
+-----------------------------------------------
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+                0.00    0.00       2/4           c10::detail::_str_wrapper<char const*, long const&>::call(char const* const&, long const&) [24]
+[32]     0.0    0.00    0.00       4         c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reset_() [32]
+-----------------------------------------------
+                                   2             c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+                0.00    0.00       2/6           c10::ArrayRef<long>::data() const [78]
+[33]     0.0    0.00    0.00       4         c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reset_() [32]
+                                   2             c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+-----------------------------------------------
+                0.00    0.00       2/4           c10::TensorOptions::layout_opt() const [68]
+[34]     0.0    0.00    0.00       4         c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reclaim(c10::intrusive_ptr_target*) [34]
+                0.00    0.00       4/7           torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+-----------------------------------------------
+[35]     0.0    0.00    0.00       4         decltype(auto) c10::str<char [92], unsigned long>(char const (&) [92], unsigned long const&) [35]
+-----------------------------------------------
+                                   2             c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [36]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::use_count() const [351]
+[36]     0.0    0.00    0.00       4+2       c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [36]
+                0.00    0.00       2/6           c10::optional<bool>::optional<bool const&, false>(bool const&) [25]
+                                   2             c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [36]
+-----------------------------------------------
+                0.00    0.00       2/4           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+                0.00    0.00       2/4           c10::detail::_str_wrapper<char const*, long const&>::call(char const* const&, long const&) [24]
+[37]     0.0    0.00    0.00       4         c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [37]
+                0.00    0.00       2/2           c10::ArrayRef<long>::data() const [78]
+-----------------------------------------------
+                0.00    0.00       2/4           c10::detail::ivalue_to_const_ref_overload_return<double>::type c10::IValue::to<double>() const & [409]
+[38]     0.0    0.00    0.00       4         c10::TensorOptions::dtype_opt() const [38]
+-----------------------------------------------
+                0.00    0.00       4/4           decltype(auto) c10::str<char [69], long>(char const (&) [69], long const&) [195]
+[39]     0.0    0.00    0.00       4         c10::SymInt::toSymNodeImplUnowned() const [39]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       4/4           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[41]     0.0    0.00    0.00       4         c10::optional<bool>::operator*() & [41]
+-----------------------------------------------
+[42]     0.0    0.00    0.00       3         c10::intrusive_ptr_target::intrusive_ptr_target() [42]
+-----------------------------------------------
+[43]     0.0    0.00    0.00       2         c10::TensorImpl::set_allow_tensor_metadata_change(bool) [43]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::detail::ivalue_to_const_ref_overload_return<double>::type c10::IValue::to<double>() const & [409]
+[44]     0.0    0.00    0.00       2         c10::TensorOptions::TensorOptions() [44]
+                0.00    0.00       2/2           c10::TensorOptions::layout_opt() const [68]
+-----------------------------------------------
+                                   2             c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_() [45]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::TensorImpl, c10::detail::intrusive_target_default_null_type<c10::TensorImpl> >::get() const [73]
+[45]     0.0    0.00    0.00       2+2       c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_() [45]
+                                   2             c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_() [45]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::operator->() [60]
+[46]     0.0    0.00    0.00       2         c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reset_() [46]
+-----------------------------------------------
+                0.00    0.00       2/2           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+                0.00    0.00       2/29          c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+-----------------------------------------------
+                                   2             c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+                                   2             c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+-----------------------------------------------
+                0.00    0.00       2/2           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[49]     0.0    0.00    0.00       2         c10::VariableVersion::VersionCounter::VersionCounter(unsigned int) [49]
+                0.00    0.00       2/6           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+-----------------------------------------------
+[50]     0.0    0.00    0.00       2         c10::VariableVersion::VersionCounter::~VersionCounter() [50]
+                0.00    0.00       2/2           c10::VariableVersion::VersionCounter::~VersionCounter() [51]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::VariableVersion::VersionCounter::~VersionCounter() [50]
+[51]     0.0    0.00    0.00       2         c10::VariableVersion::VersionCounter::~VersionCounter() [51]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+[52]     0.0    0.00    0.00       2         c10::VariableVersion::VariableVersion(unsigned int) [52]
+                0.00    0.00       2/2           decltype(auto) c10::str<char [154]>(char const (&) [154]) [54]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::operator bool() const [74]
+-----------------------------------------------
+                0.00    0.00       2/2           decltype(auto) c10::str<char [42], int>(char const (&) [42], int const&) [191]
+[53]     0.0    0.00    0.00       2         c10::raw::intrusive_ptr::incref(c10::intrusive_ptr_target*) [53]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::VariableVersion::VariableVersion(unsigned int) [52]
+[54]     0.0    0.00    0.00       2         decltype(auto) c10::str<char [154]>(char const (&) [154]) [54]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> > c10::make_intrusive<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter>, unsigned int&>(unsigned int&) [149]
+[55]     0.0    0.00    0.00       2         c10::Device::validate() [55]
+-----------------------------------------------
+                0.00    0.00       2/2           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[56]     0.0    0.00    0.00       2         c10::Scalar::v_t::v_t() [56]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::detail::ivalue_to_const_ref_overload_return<c10::complex<double> >::type c10::IValue::to<c10::complex<double> >() const & [407]
+[57]     0.0    0.00    0.00       2         c10::SymInt::check_range(long) [57]
+-----------------------------------------------
+                0.00    0.00       2/2           caffe2::TypeMeta::toScalarType() [65]
+[58]     0.0    0.00    0.00       2         c10::detail::_str_wrapper<char const*, unsigned long const&>::call(char const* const&, unsigned long const&) [58]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::intrusive_ptr(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl> const&) [31]
+-----------------------------------------------
+                0.00    0.00       2/2           at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+[59]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [59]
+                0.00    0.00       2/29          c10::TensorOptions::set_requires_grad(c10::optional<bool>) & <cycle 2> [16]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) <cycle 1> [20]
+[60]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::operator->() [60]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reset_() [46]
+-----------------------------------------------
+                0.00    0.00       2/2           decltype(auto) c10::detail::torchCheckMsgImpl<char [69], long>(char const*, char const (&) [69], long const&) [230]
+[61]     0.0    0.00    0.00       2         c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [61]
+-----------------------------------------------
+                0.00    0.00       2/2           caffe2::TypeMeta::toScalarType() [65]
+[62]     0.0    0.00    0.00       2         c10::isComplexType(c10::ScalarType) [62]
+                0.00    0.00       2/2           caffe2::TypeMeta::TypeMeta(unsigned short) [66]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::operator bool() const [74]
+[63]     0.0    0.00    0.00       2         c10::isFloatingType(c10::ScalarType) [63]
+-----------------------------------------------
+[64]     0.0    0.00    0.00       2         torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+                0.00    0.00       4/4           at::TensorBase::TensorBase(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>) [29]
+                0.00    0.00       4/4           c10::optional<bool>::operator*() & [41]
+                0.00    0.00       2/2           c10::VariableVersion::VersionCounter::VersionCounter(unsigned int) [49]
+                0.00    0.00       2/2           c10::Scalar::v_t::v_t() [56]
+                0.00    0.00       2/2           c10::VariableVersion::unique() const [75]
+                0.00    0.00       2/4           c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [37]
+                0.00    0.00       2/6           c10::detail::_str_wrapper<char const*, long const&>::call(char const* const&, long const&) [24]
+                0.00    0.00       2/29          c10::optional<c10::Device>::optional(c10::nullopt_t) <cycle 2> [21]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::detail::ivalue_to_const_ref_overload_return<c10::complex<double> >::type c10::IValue::to<c10::complex<double> >() const & [407]
+[65]     0.0    0.00    0.00       2         caffe2::TypeMeta::toScalarType() [65]
+                0.00    0.00       2/2           c10::isComplexType(c10::ScalarType) [62]
+                0.00    0.00       2/2           c10::detail::_str_wrapper<char const*, unsigned long const&>::call(char const* const&, unsigned long const&) [58]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::isComplexType(c10::ScalarType) [62]
+[66]     0.0    0.00    0.00       2         caffe2::TypeMeta::TypeMeta(unsigned short) [66]
+                0.00    0.00       2/2           caffe2::TypeMeta::isScalarType() const [80]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::detail::ivalue_to_const_ref_overload_return<c10::complex<double> >::type c10::IValue::to<c10::complex<double> >() const & [407]
+[67]     0.0    0.00    0.00       2         c10::TensorOptions::device_opt() const [67]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::TensorImpl, c10::detail::intrusive_target_default_null_type<c10::TensorImpl> >::get() const [73]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::TensorOptions() [44]
+[68]     0.0    0.00    0.00       2         c10::TensorOptions::layout_opt() const [68]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::intrusive_ptr_target, c10::detail::intrusive_target_default_null_type<c10::intrusive_ptr_target> >::reclaim(c10::intrusive_ptr_target*) [34]
+                0.00    0.00       2/7           torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::detail::ivalue_to_const_ref_overload_return<c10::complex<double> >::type c10::IValue::to<c10::complex<double> >() const & [407]
+[69]     0.0    0.00    0.00       2         c10::TensorOptions::requires_grad(c10::optional<bool>) const [69]
+-----------------------------------------------
+[70]     0.0    0.00    0.00       2         c10::TensorOptions::pinned_memory_opt() const [70]
+-----------------------------------------------
+[71]     0.0    0.00    0.00       2         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::use_count() const [71]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator bool() const [72]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::use_count() const [71]
+[72]     0.0    0.00    0.00       2         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator bool() const [72]
+                0.00    0.00       2/4           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::intrusive_ptr(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl> const&) [31]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::device_opt() const [67]
+[73]     0.0    0.00    0.00       2         c10::intrusive_ptr<c10::TensorImpl, c10::detail::intrusive_target_default_null_type<c10::TensorImpl> >::get() const [73]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::reset_() [45]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::VariableVersion::VariableVersion(unsigned int) [52]
+[74]     0.0    0.00    0.00       2         c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::operator bool() const [74]
+                0.00    0.00       2/2           c10::isFloatingType(c10::ScalarType) [63]
+-----------------------------------------------
+                0.00    0.00       2/2           torch::autograd::AutogradMeta::AutogradMeta(c10::TensorImpl*, bool, torch::autograd::Edge) [64]
+[75]     0.0    0.00    0.00       2         c10::VariableVersion::unique() const [75]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::initialized() const [79]
+[76]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [76]
+-----------------------------------------------
+                0.00    0.00       2/2           decltype(auto) c10::str<char [68]>(char const (&) [68]) [194]
+[77]     0.0    0.00    0.00       2         c10::Device::is_cpu() const [77]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [37]
+[78]     0.0    0.00    0.00       2         c10::ArrayRef<long>::data() const [78]
+                0.00    0.00       2/6           c10::intrusive_ptr<c10::SymNodeImpl, c10::detail::intrusive_target_default_null_type<c10::SymNodeImpl> >::reclaim(c10::SymNodeImpl*) <cycle 1> [33]
+-----------------------------------------------
+                0.00    0.00       2/2           torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+[79]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::initialized() const [79]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [76]
+-----------------------------------------------
+                0.00    0.00       2/2           caffe2::TypeMeta::TypeMeta(unsigned short) [66]
+[80]     0.0    0.00    0.00       2         caffe2::TypeMeta::isScalarType() const [80]
+-----------------------------------------------
+[81]     0.0    0.00    0.00       2         c10::detail::ivalue_to_const_ref_overload_return<at::Tensor>::type c10::IValue::to<at::Tensor>() const & [81]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::VariableVersion::VersionCounter, c10::detail::intrusive_target_default_null_type<c10::VariableVersion::VersionCounter> >::use_count() const [351]
+                0.00    0.00       2/4           c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [36]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::requires_grad(c10::optional<bool>) const [69]
+                0.00    0.00       2/2           c10::VariableVersion::VersionCounter::~VersionCounter() [50]
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+-----------------------------------------------
+                0.00    0.00       2/2           decltype(auto) c10::str<char [69], long>(char const (&) [69], long const&) [195]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::TensorOptions() [44]
+                0.00    0.00       2/2           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::use_count() const [71]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       2/2           decltype(auto) c10::str<char [69], long>(char const (&) [69], long const&) [195]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       1/1           main [9]
+[93]     0.0    0.00    0.00       1         at::TensorBase::TensorBase(at::TensorBase const&) [93]
+-----------------------------------------------
+[94]     0.0    0.00    0.00       1         c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base(caffe2::TypeMeta const&) [94]
+-----------------------------------------------
+                0.00    0.00       1/1           main [9]
+[95]     0.0    0.00    0.00       1         at::Tensor c10::IValue::to<at::Tensor>() && [95]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       1/1           torch::randn(c10::ArrayRef<long>, c10::TensorOptions) [22]
+-----------------------------------------------
+                0.00    0.00       1/1           at::TensorBase::TensorBase(at::TensorBase const&) [93]
+                0.00    0.00       1/1           c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base(caffe2::TypeMeta const&) [94]
+-----------------------------------------------
+-----------------------------------------------
+                0.00    0.00       4/4           decltype(auto) c10::str<char [92], unsigned long>(char const (&) [92], unsigned long const&) [35]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [93] at::TensorBase::TensorBase(at::TensorBase const&) [58] c10::detail::_str_wrapper<char const*, unsigned long const&>::call(char const* const&, unsigned long const&) [80] caffe2::TypeMeta::isScalarType() const
+  [27] at::TensorBase::~TensorBase() [37] c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [81] c10::detail::ivalue_to_const_ref_overload_return<at::Tensor>::type c10::IValue::to<at::Tensor>() const &
+  [43] c10::TensorImpl::set_allow_tensor_metadata_change(bool) [59] c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [95] at::Tensor c10::IValue::to<at::Tensor>() &&
+  [44] c10::TensorOptions::TensorOptions() [60] c10::optional<caffe2::TypeMeta>::operator->() [16] c10::TensorOptions::set_requires_grad(c10::optional<bool>) &
+  [31] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::intrusive_ptr(c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl> const&) [61] c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [41] c10::optional<bool>::operator*() &
+  [55] c10::Device::validate() [76] c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [2] <cycle 1>
+  [56] c10::Scalar::v_t::v_t() [77] c10::Device::is_cpu() const [3] <cycle 2>
+  [28] c10::Scalar::~Scalar() [39] c10::SymInt::toSymNodeImplUnowned() const
+  [57] c10::SymInt::check_range(long) [78] c10::ArrayRef<long>::data() const

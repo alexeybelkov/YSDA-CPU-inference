@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/alexey/YSDA/YSDA-CPU-inference/cpp"
+    "cmake.sourceDirectory": "/home/alexey/YSDA/YSDA-CPU-inference/cpp",
+    "python.analysis.autoImportCompletions": true
 }
