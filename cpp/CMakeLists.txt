@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 17)
 project(ysda-cpu-inference)
 
@@ -12,6 +12,8 @@ SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g")
 
 
 include_directories(libtorch/include/)
-add_executable(ysda-cpu-inference src/main.cpp)
+# include_directories(aten/src)
+add_executable(ysda-cpu-inference src/libtorch.cpp)
+# add_executable(ysda-cpu-inference src/aten.cpp)
 target_link_libraries(ysda-cpu-inference "${TORCH_LIBRARIES}")
-set_property(TARGET ysda-cpu-inference PROPERTY CXX_STANDARD 17)  
+set_property(TARGET ysda-cpu-inference PROPERTY CXX_STANDARD 17)
