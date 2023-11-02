@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "ATen/native/LinearAlgebra.h"
+#include "ATen/native/LinearAlgebra.cpp"
+// #include "ATen/ATen.h"
 
 int main() {
-    std::cout << "HELLO\n";
-    return 0;
+
 }
