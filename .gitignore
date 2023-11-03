@@ -4,3 +4,7 @@ cpp/libtorch
 build
 .vscode
 __pycache__
+gitignore
+cpp/C10
+cpp/aten
+onnx/*
