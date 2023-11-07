@@ -7,4 +7,5 @@ build
 .vscode
 __pycache__
 gitignore
-
+onnx
+build-asan
