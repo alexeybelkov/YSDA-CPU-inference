@@ -3,6 +3,7 @@ tiny-imagenet-200.zip
 cpp/libtorch
 cpp/aten
 cpp/C10
+cpp/pytorch*
 build
 .vscode
 __pycache__

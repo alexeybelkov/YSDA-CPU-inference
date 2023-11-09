@@ -3,7 +3,15 @@
 The aim of this project is to investigate whether the int8 architecture can provide acceleration compared to the fp16/fp32 architecture (in particular, there must be good INT8 computing structures for this to be profitable)       
 
 ### C++ config      
-To be able to compile & run C++ code in **/cpp** folder, you need to add libtorch as in [this guide](https://pytorch.org/cppdocs/installing.html#minimal-example)       
+In this branch we used directly builded libtorch as in [Building libtorch using CMake](https://github.com/pytorch/pytorch/blob/main/docs/libtorch.rst#building-libtorch-using-cmake)        
+We builded it in Debug mode, to do this the one needs to run the following commands in in **/cpp** folder
+```shell
+git clone -b main --recurse-submodule https://github.com/pytorch/pytorch.git
+mkdir pytorch-build
+cd pytorch-build
+cmake -DBUILD_SHARED_LIBS:BOOL=ON -DCMAKE_BUILD_TYPE:STRING=Debug -DPYTHON_EXECUTABLE:PATH=`which python3` -DCMAKE_INSTALL_PREFIX:PATH=../pytorch-install ../pytorch
+cmake --build . --target install
+```
        
 ### Usefull links      
 

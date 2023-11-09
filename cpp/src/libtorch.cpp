@@ -16,8 +16,6 @@ int main() {
     // at::Tensor result = at::zeros_like(m1);
 
     at::Tensor output = at::linear(input, weight);
-    std::cout << output.size(0);
-    
-
+    std::cout << output.size(0) << std::endl;
     // std::cout << output[0][0];
 }  
