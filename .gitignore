@@ -1,11 +1,12 @@
 tiny-imagenet-200*
 tiny-imagenet-200.zip
 cpp/libtorch
+cpp/aten
+cpp/C10
+cpp/pytorch*
 build
-build-asan
 .vscode
 __pycache__
 gitignore
-cpp/C10
-cpp/aten
-onnx/*
+onnx
+build-asan
