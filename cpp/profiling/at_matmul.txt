@@ -1,0 +1,662 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00   309167     0.00     0.00  bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+  0.00      0.00     0.00   309167     0.00     0.00  std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag)
+  0.00      0.00     0.00   309167     0.00     0.00  std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&)
+  0.00      0.00     0.00   309167     0.00     0.00  std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*)
+  0.00      0.00     0.00     1035     0.00     0.00  long&& std::forward<long>(std::remove_reference<long>::type&)
+  0.00      0.00     0.00      690     0.00     0.00  __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator(long* const&)
+  0.00      0.00     0.00      465     0.00     0.00  long* std::__niter_base<long*>(long*)
+  0.00      0.00     0.00      349     0.00     0.00  __gnu_cxx::new_allocator<long>::_M_max_size() const
+  0.00      0.00     0.00      345     0.00     0.00  void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&)
+  0.00      0.00     0.00      345     0.00     0.00  __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator*() const
+  0.00      0.00     0.00      345     0.00     0.00  __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-(long) const
+  0.00      0.00     0.00      345     0.00     0.00  void std::allocator_traits<std::allocator<long> >::construct<long, long>(std::allocator<long>&, long*, long&&)
+  0.00      0.00     0.00      345     0.00     0.00  std::vector<long, std::allocator<long> >::end()
+  0.00      0.00     0.00      345     0.00     0.00  std::vector<long, std::allocator<long> >::back()
+  0.00      0.00     0.00      345     0.00     0.00  operator new(unsigned long, void*)
+  0.00      0.00     0.00      194     0.00     0.00  __gnu_cxx::new_allocator<long>::max_size() const
+  0.00      0.00     0.00      194     0.00     0.00  std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator() const
+  0.00      0.00     0.00      194     0.00     0.00  std::vector<long, std::allocator<long> >::capacity() const
+  0.00      0.00     0.00      194     0.00     0.00  std::vector<long, std::allocator<long> >::max_size() const
+  0.00      0.00     0.00      194     0.00     0.00  std::allocator_traits<std::allocator<long> >::max_size(std::allocator<long> const&)
+  0.00      0.00     0.00      194     0.00     0.00  std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&)
+  0.00      0.00     0.00      194     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.00     0.00      155     0.00     0.00  __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*)
+  0.00      0.00     0.00      155     0.00     0.00  std::vector<long, std::allocator<long> >::size() const
+  0.00      0.00     0.00      155     0.00     0.00  std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long)
+  0.00      0.00     0.00      155     0.00     0.00  std::_Vector_base<long, std::allocator<long> >::_M_deallocate(long*, unsigned long)
+  0.00      0.00     0.00      155     0.00     0.00  std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator()
+  0.00      0.00     0.00      155     0.00     0.00  std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long)
+  0.00      0.00     0.00      155     0.00     0.00  std::vector<long, std::allocator<long> >::_S_relocate(long*, long*, long*, std::allocator<long>&)
+  0.00      0.00     0.00      155     0.00     0.00  std::vector<long, std::allocator<long> >::_S_do_relocate(long*, long*, long*, std::allocator<long>&, std::integral_constant<bool, true>)
+  0.00      0.00     0.00      155     0.00     0.00  long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&)
+  0.00      0.00     0.00      155     0.00     0.00  std::enable_if<std::__is_bitwise_relocatable<long, void>::value, long*>::type std::__relocate_a_1<long, long>(long*, long*, long*, std::allocator<long>&)
+  0.00      0.00     0.00        6     0.00     0.00  std::initializer_list<long>::begin() const
+  0.00      0.00     0.00        4     0.00     0.00  c10::SymInt::check_range(long)
+  0.00      0.00     0.00        4     0.00     0.00  std::initializer_list<long>::size() const
+  0.00      0.00     0.00        4     0.00     0.00  long const* std::begin<long>(std::initializer_list<long>)
+  0.00      0.00     0.00        3     0.00     0.00  at::TensorBase::~TensorBase()
+  0.00      0.00     0.00        3     0.00     0.00  at::Tensor::~Tensor()
+  0.00      0.00     0.00        3     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_()
+  0.00      0.00     0.00        3     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::~intrusive_ptr()
+  0.00      0.00     0.00        3     0.00     0.00  c10::UndefinedTensorImpl::singleton()
+  0.00      0.00     0.00        3     0.00     0.00  c10::detail::atomic_refcount_decrement(std::atomic<unsigned long>&)
+  0.00      0.00     0.00        3     0.00     0.00  c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator->() const
+  0.00      0.00     0.00        3     0.00     0.00  std::operator&(std::memory_order, std::__memory_order_modifier)
+  0.00      0.00     0.00        2     0.00     0.00  at::rand(c10::ArrayRef<long>, c10::TensorOptions)
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorOptions::TensorOptions()
+  0.00      0.00     0.00        2     0.00     0.00  c10::constexpr_storage_t<caffe2::TypeMeta>::constexpr_storage_t(c10::trivial_init_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::constexpr_storage_t<c10::ScalarType>::constexpr_storage_t(c10::trivial_init_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::constexpr_storage_t<c10::Device>::constexpr_storage_t(c10::trivial_init_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::constexpr_storage_t<c10::Layout>::constexpr_storage_t(c10::trivial_init_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::constexpr_storage_t<bool>::constexpr_storage_t(c10::trivial_init_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::fromIntArrayRefSlow(c10::ArrayRef<long>)
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base()
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<c10::ScalarType>::trivially_copyable_optimization_optional_base()
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<c10::Device>::trivially_copyable_optimization_optional_base()
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<c10::Layout>::trivially_copyable_optimization_optional_base()
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<bool>::trivially_copyable_optimization_optional_base()
+  0.00      0.00     0.00        2     0.00     0.00  c10::Device::validate()
+  0.00      0.00     0.00        2     0.00     0.00  c10::Device::Device(c10::DeviceType, signed char)
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant()
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<c10::ScalarType>::optional(c10::nullopt_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<c10::Device>::optional(c10::nullopt_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<c10::Layout>::optional(c10::nullopt_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<bool>::optional(c10::nullopt_t)
+  0.00      0.00     0.00        2     0.00     0.00  c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>)
+  0.00      0.00     0.00        2     0.00     0.00  unsigned short caffe2::TypeMeta::_typeMetaData<float>()
+  0.00      0.00     0.00        2     0.00     0.00  caffe2::TypeMeta caffe2::TypeMeta::Make<float>()
+  0.00      0.00     0.00        2     0.00     0.00  caffe2::TypeMeta::TypeMeta(unsigned short)
+  0.00      0.00     0.00        2     0.00     0.00  at::TensorBase::set_requires_grad(bool) const
+  0.00      0.00     0.00        2     0.00     0.00  at::Tensor::set_requires_grad(bool) const
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorImpl::matches_policy(c10::TensorImpl::SizesStridesPolicy) const
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorOptions::device_opt() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorOptions::layout_opt() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorOptions::pinned_memory_opt() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::TensorOptions::dtype_opt() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::Device::is_cpu() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<long>::end() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<long>::data() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<long>::size() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::ArrayRef<long>::begin() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::initialized() const
+  0.00      0.00     0.00        2     0.00     0.00  c10::optional<caffe2::TypeMeta>::has_value() const
+  0.00      0.00     0.00        2     0.00     0.00  std::initializer_list<long>::end() const
+  0.00      0.00     0.00        2     0.00     0.00  long const* std::end<long>(std::initializer_list<long>)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  at::matmul(at::Tensor const&, at::Tensor const&)
+  0.00      0.00     0.00        1     0.00     0.00  c10::maybe_wrap_dim(long, long, bool)
+  0.00      0.00     0.00        1     0.00     0.00  long c10::_maybe_wrap_dim<long>(long, long, bool)
+  0.00      0.00     0.00        1     0.00     0.00  at::TensorBase::size(long) const
+  0.00      0.00     0.00        1     0.00     0.00  c10::TensorImpl::dim() const
+  0.00      0.00     0.00        1     0.00     0.00  c10::TensorImpl::size(long) const
+  0.00      0.00     0.00        1     0.00     0.00  c10::impl::SizesAndStrides::sizes_data() const
+  0.00      0.00     0.00        1     0.00     0.00  c10::impl::SizesAndStrides::size_at_unchecked(unsigned long) const
+  0.00      0.00     0.00        1     0.00     0.00  c10::impl::SizesAndStrides::size() const
+  0.00      0.00     0.00        1     0.00     0.00  c10::impl::SizesAndStrides::isInline() const
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00  309167/309167      void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [535]
+[8]      0.0    0.00    0.00  309167         bool __gnu_cxx::__is_null_pointer<char const>(char const*) [8]
+-----------------------------------------------
+                0.00    0.00  309167/309167      std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [11]
+[9]      0.0    0.00    0.00  309167         std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag) [9]
+-----------------------------------------------
+                0.00    0.00  309167/309167      std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [11]
+[10]     0.0    0.00    0.00  309167         std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&) [10]
+-----------------------------------------------
+                0.00    0.00  309167/309167      void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [535]
+[11]     0.0    0.00    0.00  309167         std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [11]
+                0.00    0.00  309167/309167      std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&) [10]
+                0.00    0.00  309167/309167      std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag) [9]
+-----------------------------------------------
+                0.00    0.00     345/1035        long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) [527]
+                0.00    0.00     345/1035        void std::allocator_traits<std::allocator<long> >::construct<long, long>(std::allocator<long>&, long*, long&&) [19]
+                0.00    0.00     345/1035        void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&) [16]
+[12]     0.0    0.00    0.00    1035         long&& std::forward<long>(std::remove_reference<long>::type&) [12]
+-----------------------------------------------
+                0.00    0.00     345/690         std::vector<long, std::allocator<long> >::end() [20]
+                0.00    0.00     345/690         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-(long) const [18]
+[13]     0.0    0.00    0.00     690         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator(long* const&) [13]
+-----------------------------------------------
+                0.00    0.00     465/465         long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&) [38]
+[14]     0.0    0.00    0.00     465         long* std::__niter_base<long*>(long*) [14]
+-----------------------------------------------
+                0.00    0.00     155/349         __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) [30]
+                0.00    0.00     194/349         __gnu_cxx::new_allocator<long>::max_size() const [23]
+[15]     0.0    0.00    0.00     349         __gnu_cxx::new_allocator<long>::_M_max_size() const [15]
+-----------------------------------------------
+                0.00    0.00     345/345         void std::allocator_traits<std::allocator<long> >::construct<long, long>(std::allocator<long>&, long*, long&&) [19]
+[16]     0.0    0.00    0.00     345         void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&) [16]
+                0.00    0.00     345/1035        long&& std::forward<long>(std::remove_reference<long>::type&) [12]
+                0.00    0.00     345/345         operator new(unsigned long, void*) [22]
+-----------------------------------------------
+                0.00    0.00     345/345         std::vector<long, std::allocator<long> >::back() [21]
+[17]     0.0    0.00    0.00     345         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator*() const [17]
+-----------------------------------------------
+                0.00    0.00     345/345         std::vector<long, std::allocator<long> >::back() [21]
+[18]     0.0    0.00    0.00     345         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-(long) const [18]
+                0.00    0.00     345/690         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator(long* const&) [13]
+-----------------------------------------------
+                0.00    0.00     345/345         long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) [527]
+[19]     0.0    0.00    0.00     345         void std::allocator_traits<std::allocator<long> >::construct<long, long>(std::allocator<long>&, long*, long&&) [19]
+                0.00    0.00     345/1035        long&& std::forward<long>(std::remove_reference<long>::type&) [12]
+                0.00    0.00     345/345         void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&) [16]
+-----------------------------------------------
+                0.00    0.00     345/345         std::vector<long, std::allocator<long> >::back() [21]
+[20]     0.0    0.00    0.00     345         std::vector<long, std::allocator<long> >::end() [20]
+                0.00    0.00     345/690         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator(long* const&) [13]
+-----------------------------------------------
+                0.00    0.00     345/345         long& std::vector<long, std::allocator<long> >::emplace_back<long>(long&&) [527]
+[21]     0.0    0.00    0.00     345         std::vector<long, std::allocator<long> >::back() [21]
+                0.00    0.00     345/345         std::vector<long, std::allocator<long> >::end() [20]
+                0.00    0.00     345/345         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-(long) const [18]
+                0.00    0.00     345/345         __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator*() const [17]
+-----------------------------------------------
+                0.00    0.00     345/345         void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&) [16]
+[22]     0.0    0.00    0.00     345         operator new(unsigned long, void*) [22]
+-----------------------------------------------
+                0.00    0.00     194/194         std::allocator_traits<std::allocator<long> >::max_size(std::allocator<long> const&) [27]
+[23]     0.0    0.00    0.00     194         __gnu_cxx::new_allocator<long>::max_size() const [23]
+                0.00    0.00     194/349         __gnu_cxx::new_allocator<long>::_M_max_size() const [15]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::max_size() const [26]
+[24]     0.0    0.00    0.00     194         std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator() const [24]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[25]     0.0    0.00    0.00     194         std::vector<long, std::allocator<long> >::capacity() const [25]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[26]     0.0    0.00    0.00     194         std::vector<long, std::allocator<long> >::max_size() const [26]
+                0.00    0.00     194/194         std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator() const [24]
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&) [28]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&) [28]
+[27]     0.0    0.00    0.00     194         std::allocator_traits<std::allocator<long> >::max_size(std::allocator<long> const&) [27]
+                0.00    0.00     194/194         __gnu_cxx::new_allocator<long>::max_size() const [23]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::max_size() const [26]
+[28]     0.0    0.00    0.00     194         std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&) [28]
+                0.00    0.00     194/194         std::allocator_traits<std::allocator<long> >::max_size(std::allocator<long> const&) [27]
+                0.00    0.00     194/194         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [29]
+-----------------------------------------------
+                0.00    0.00     194/194         std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&) [28]
+[29]     0.0    0.00    0.00     194         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [29]
+-----------------------------------------------
+                0.00    0.00     155/155         std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) [35]
+[30]     0.0    0.00    0.00     155         __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) [30]
+                0.00    0.00     155/349         __gnu_cxx::new_allocator<long>::_M_max_size() const [15]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[31]     0.0    0.00    0.00     155         std::vector<long, std::allocator<long> >::size() const [31]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[32]     0.0    0.00    0.00     155         std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) [32]
+                0.00    0.00     155/155         std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) [35]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[33]     0.0    0.00    0.00     155         std::_Vector_base<long, std::allocator<long> >::_M_deallocate(long*, unsigned long) [33]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[34]     0.0    0.00    0.00     155         std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator() [34]
+-----------------------------------------------
+                0.00    0.00     155/155         std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long) [32]
+[35]     0.0    0.00    0.00     155         std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long) [35]
+                0.00    0.00     155/155         __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) [30]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::reserve(unsigned long) [530]
+[36]     0.0    0.00    0.00     155         std::vector<long, std::allocator<long> >::_S_relocate(long*, long*, long*, std::allocator<long>&) [36]
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::_S_do_relocate(long*, long*, long*, std::allocator<long>&, std::integral_constant<bool, true>) [37]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::_S_relocate(long*, long*, long*, std::allocator<long>&) [36]
+[37]     0.0    0.00    0.00     155         std::vector<long, std::allocator<long> >::_S_do_relocate(long*, long*, long*, std::allocator<long>&, std::integral_constant<bool, true>) [37]
+                0.00    0.00     155/155         long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&) [38]
+-----------------------------------------------
+                0.00    0.00     155/155         std::vector<long, std::allocator<long> >::_S_do_relocate(long*, long*, long*, std::allocator<long>&, std::integral_constant<bool, true>) [37]
+[38]     0.0    0.00    0.00     155         long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&) [38]
+                0.00    0.00     465/465         long* std::__niter_base<long*>(long*) [14]
+                0.00    0.00     155/155         std::enable_if<std::__is_bitwise_relocatable<long, void>::value, long*>::type std::__relocate_a_1<long, long>(long*, long*, long*, std::allocator<long>&) [39]
+-----------------------------------------------
+                0.00    0.00     155/155         long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&) [38]
+[39]     0.0    0.00    0.00     155         std::enable_if<std::__is_bitwise_relocatable<long, void>::value, long*>::type std::__relocate_a_1<long, long>(long*, long*, long*, std::allocator<long>&) [39]
+-----------------------------------------------
+                0.00    0.00       2/6           std::initializer_list<long>::end() const [94]
+                0.00    0.00       4/6           long const* std::begin<long>(std::initializer_list<long>) [43]
+[40]     0.0    0.00    0.00       6         std::initializer_list<long>::begin() const [40]
+-----------------------------------------------
+                0.00    0.00       4/4           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[41]     0.0    0.00    0.00       4         c10::SymInt::check_range(long) [41]
+-----------------------------------------------
+                0.00    0.00       2/4           c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&) [69]
+                0.00    0.00       2/4           std::initializer_list<long>::end() const [94]
+[42]     0.0    0.00    0.00       4         std::initializer_list<long>::size() const [42]
+-----------------------------------------------
+                0.00    0.00       4/4           c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&) [69]
+[43]     0.0    0.00    0.00       4         long const* std::begin<long>(std::initializer_list<long>) [43]
+                0.00    0.00       4/6           std::initializer_list<long>::begin() const [40]
+-----------------------------------------------
+                0.00    0.00       3/3           at::Tensor::~Tensor() [45]
+[44]     0.0    0.00    0.00       3         at::TensorBase::~TensorBase() [44]
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::~intrusive_ptr() [47]
+-----------------------------------------------
+                0.00    0.00       3/3           main [6]
+[45]     0.0    0.00    0.00       3         at::Tensor::~Tensor() [45]
+                0.00    0.00       3/3           at::TensorBase::~TensorBase() [44]
+-----------------------------------------------
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::~intrusive_ptr() [47]
+[46]     0.0    0.00    0.00       3         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [46]
+                0.00    0.00       3/3           c10::UndefinedTensorImpl::singleton() [48]
+                0.00    0.00       3/3           c10::detail::atomic_refcount_decrement(std::atomic<unsigned long>&) [49]
+                0.00    0.00       3/3           std::operator&(std::memory_order, std::__memory_order_modifier) [51]
+-----------------------------------------------
+                0.00    0.00       3/3           at::TensorBase::~TensorBase() [44]
+[47]     0.0    0.00    0.00       3         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::~intrusive_ptr() [47]
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [46]
+-----------------------------------------------
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [46]
+[48]     0.0    0.00    0.00       3         c10::UndefinedTensorImpl::singleton() [48]
+-----------------------------------------------
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [46]
+[49]     0.0    0.00    0.00       3         c10::detail::atomic_refcount_decrement(std::atomic<unsigned long>&) [49]
+-----------------------------------------------
+                0.00    0.00       1/3           at::TensorBase::size(long) const [100]
+                0.00    0.00       2/3           at::TensorBase::set_requires_grad(bool) const [79]
+[50]     0.0    0.00    0.00       3         c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator->() const [50]
+-----------------------------------------------
+                0.00    0.00       3/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [46]
+[51]     0.0    0.00    0.00       3         std::operator&(std::memory_order, std::__memory_order_modifier) [51]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[52]     0.0    0.00    0.00       2         at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+                0.00    0.00       2/2           c10::TensorOptions::pinned_memory_opt() const [84]
+                0.00    0.00       2/2           c10::TensorOptions::device_opt() const [82]
+                0.00    0.00       2/2           c10::TensorOptions::layout_opt() const [83]
+                0.00    0.00       2/2           c10::TensorOptions::dtype_opt() const [85]
+                0.00    0.00       2/2           c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>) [75]
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[53]     0.0    0.00    0.00       2         c10::TensorOptions::TensorOptions() [53]
+                0.00    0.00       2/2           c10::Device::Device(c10::DeviceType, signed char) [66]
+                0.00    0.00       2/2           caffe2::TypeMeta caffe2::TypeMeta::Make<float>() [77]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base() [60]
+[54]     0.0    0.00    0.00       2         c10::constexpr_storage_t<caffe2::TypeMeta>::constexpr_storage_t(c10::trivial_init_t) [54]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::ScalarType>::trivially_copyable_optimization_optional_base() [61]
+[55]     0.0    0.00    0.00       2         c10::constexpr_storage_t<c10::ScalarType>::constexpr_storage_t(c10::trivial_init_t) [55]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::Device>::trivially_copyable_optimization_optional_base() [62]
+[56]     0.0    0.00    0.00       2         c10::constexpr_storage_t<c10::Device>::constexpr_storage_t(c10::trivial_init_t) [56]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::Layout>::trivially_copyable_optimization_optional_base() [63]
+[57]     0.0    0.00    0.00       2         c10::constexpr_storage_t<c10::Layout>::constexpr_storage_t(c10::trivial_init_t) [57]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<bool>::trivially_copyable_optimization_optional_base() [64]
+[58]     0.0    0.00    0.00       2         c10::constexpr_storage_t<bool>::constexpr_storage_t(c10::trivial_init_t) [58]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[59]     0.0    0.00    0.00       2         c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+                0.00    0.00       4/4           c10::SymInt::check_range(long) [41]
+                0.00    0.00       2/2           c10::ArrayRef<long>::begin() const [91]
+                0.00    0.00       2/2           c10::ArrayRef<long>::end() const [88]
+                0.00    0.00       2/2           c10::ArrayRef<long>::size() const [90]
+                0.00    0.00       2/2           c10::ArrayRef<long>::data() const [89]
+                0.00    0.00       2/2           c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [68]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [70]
+[60]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base() [60]
+                0.00    0.00       2/2           c10::constexpr_storage_t<caffe2::TypeMeta>::constexpr_storage_t(c10::trivial_init_t) [54]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [71]
+[61]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<c10::ScalarType>::trivially_copyable_optimization_optional_base() [61]
+                0.00    0.00       2/2           c10::constexpr_storage_t<c10::ScalarType>::constexpr_storage_t(c10::trivial_init_t) [55]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<c10::Device>::optional(c10::nullopt_t) [72]
+[62]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<c10::Device>::trivially_copyable_optimization_optional_base() [62]
+                0.00    0.00       2/2           c10::constexpr_storage_t<c10::Device>::constexpr_storage_t(c10::trivial_init_t) [56]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<c10::Layout>::optional(c10::nullopt_t) [73]
+[63]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<c10::Layout>::trivially_copyable_optimization_optional_base() [63]
+                0.00    0.00       2/2           c10::constexpr_storage_t<c10::Layout>::constexpr_storage_t(c10::trivial_init_t) [57]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<bool>::optional(c10::nullopt_t) [74]
+[64]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<bool>::trivially_copyable_optimization_optional_base() [64]
+                0.00    0.00       2/2           c10::constexpr_storage_t<bool>::constexpr_storage_t(c10::trivial_init_t) [58]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::Device::Device(c10::DeviceType, signed char) [66]
+[65]     0.0    0.00    0.00       2         c10::Device::validate() [65]
+                0.00    0.00       2/2           c10::Device::is_cpu() const [87]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::TensorOptions() [53]
+[66]     0.0    0.00    0.00       2         c10::Device::Device(c10::DeviceType, signed char) [66]
+                0.00    0.00       2/2           c10::Device::validate() [65]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [68]
+[67]     0.0    0.00    0.00       2         c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [67]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[68]     0.0    0.00    0.00       2         c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [68]
+                0.00    0.00       2/2           c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [67]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[69]     0.0    0.00    0.00       2         c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&) [69]
+                0.00    0.00       4/4           long const* std::begin<long>(std::initializer_list<long>) [43]
+                0.00    0.00       2/2           long const* std::end<long>(std::initializer_list<long>) [95]
+                0.00    0.00       2/4           std::initializer_list<long>::size() const [42]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::dtype_opt() const [85]
+[70]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [70]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base() [60]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>) [75]
+[71]     0.0    0.00    0.00       2         c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [71]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::ScalarType>::trivially_copyable_optimization_optional_base() [61]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::device_opt() const [82]
+[72]     0.0    0.00    0.00       2         c10::optional<c10::Device>::optional(c10::nullopt_t) [72]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::Device>::trivially_copyable_optimization_optional_base() [62]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::layout_opt() const [83]
+[73]     0.0    0.00    0.00       2         c10::optional<c10::Layout>::optional(c10::nullopt_t) [73]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<c10::Layout>::trivially_copyable_optimization_optional_base() [63]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::pinned_memory_opt() const [84]
+[74]     0.0    0.00    0.00       2         c10::optional<bool>::optional(c10::nullopt_t) [74]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<bool>::trivially_copyable_optimization_optional_base() [64]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[75]     0.0    0.00    0.00       2         c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>) [75]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::has_value() const [93]
+                0.00    0.00       2/2           c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [71]
+-----------------------------------------------
+                0.00    0.00       2/2           caffe2::TypeMeta caffe2::TypeMeta::Make<float>() [77]
+[76]     0.0    0.00    0.00       2         unsigned short caffe2::TypeMeta::_typeMetaData<float>() [76]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::TensorOptions::TensorOptions() [53]
+[77]     0.0    0.00    0.00       2         caffe2::TypeMeta caffe2::TypeMeta::Make<float>() [77]
+                0.00    0.00       2/2           unsigned short caffe2::TypeMeta::_typeMetaData<float>() [76]
+                0.00    0.00       2/2           caffe2::TypeMeta::TypeMeta(unsigned short) [78]
+-----------------------------------------------
+                0.00    0.00       2/2           caffe2::TypeMeta caffe2::TypeMeta::Make<float>() [77]
+[78]     0.0    0.00    0.00       2         caffe2::TypeMeta::TypeMeta(unsigned short) [78]
+-----------------------------------------------
+                0.00    0.00       2/2           at::Tensor::set_requires_grad(bool) const [80]
+[79]     0.0    0.00    0.00       2         at::TensorBase::set_requires_grad(bool) const [79]
+                0.00    0.00       2/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator->() const [50]
+-----------------------------------------------
+                0.00    0.00       2/2           main [6]
+[80]     0.0    0.00    0.00       2         at::Tensor::set_requires_grad(bool) const [80]
+                0.00    0.00       2/2           at::TensorBase::set_requires_grad(bool) const [79]
+-----------------------------------------------
+                0.00    0.00       1/2           c10::TensorImpl::dim() const [101]
+                0.00    0.00       1/2           c10::TensorImpl::size(long) const [102]
+[81]     0.0    0.00    0.00       2         c10::TensorImpl::matches_policy(c10::TensorImpl::SizesStridesPolicy) const [81]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[82]     0.0    0.00    0.00       2         c10::TensorOptions::device_opt() const [82]
+                0.00    0.00       2/2           c10::optional<c10::Device>::optional(c10::nullopt_t) [72]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[83]     0.0    0.00    0.00       2         c10::TensorOptions::layout_opt() const [83]
+                0.00    0.00       2/2           c10::optional<c10::Layout>::optional(c10::nullopt_t) [73]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[84]     0.0    0.00    0.00       2         c10::TensorOptions::pinned_memory_opt() const [84]
+                0.00    0.00       2/2           c10::optional<bool>::optional(c10::nullopt_t) [74]
+-----------------------------------------------
+                0.00    0.00       2/2           at::rand(c10::ArrayRef<long>, c10::TensorOptions) [52]
+[85]     0.0    0.00    0.00       2         c10::TensorOptions::dtype_opt() const [85]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [70]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::initialized() const [92]
+[86]     0.0    0.00    0.00       2         c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [86]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::Device::validate() [65]
+[87]     0.0    0.00    0.00       2         c10::Device::is_cpu() const [87]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[88]     0.0    0.00    0.00       2         c10::ArrayRef<long>::end() const [88]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[89]     0.0    0.00    0.00       2         c10::ArrayRef<long>::data() const [89]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[90]     0.0    0.00    0.00       2         c10::ArrayRef<long>::size() const [90]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [59]
+[91]     0.0    0.00    0.00       2         c10::ArrayRef<long>::begin() const [91]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::has_value() const [93]
+[92]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::initialized() const [92]
+                0.00    0.00       2/2           c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [86]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>) [75]
+[93]     0.0    0.00    0.00       2         c10::optional<caffe2::TypeMeta>::has_value() const [93]
+                0.00    0.00       2/2           c10::optional<caffe2::TypeMeta>::initialized() const [92]
+-----------------------------------------------
+                0.00    0.00       2/2           long const* std::end<long>(std::initializer_list<long>) [95]
+[94]     0.0    0.00    0.00       2         std::initializer_list<long>::end() const [94]
+                0.00    0.00       2/6           std::initializer_list<long>::begin() const [40]
+                0.00    0.00       2/4           std::initializer_list<long>::size() const [42]
+-----------------------------------------------
+                0.00    0.00       2/2           c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&) [69]
+[95]     0.0    0.00    0.00       2         long const* std::end<long>(std::initializer_list<long>) [95]
+                0.00    0.00       2/2           std::initializer_list<long>::end() const [94]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [107]
+[96]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [96]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[97]     0.0    0.00    0.00       1         at::matmul(at::Tensor const&, at::Tensor const&) [97]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::TensorImpl::size(long) const [102]
+[98]     0.0    0.00    0.00       1         c10::maybe_wrap_dim(long, long, bool) [98]
+                0.00    0.00       1/1           long c10::_maybe_wrap_dim<long>(long, long, bool) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::maybe_wrap_dim(long, long, bool) [98]
+[99]     0.0    0.00    0.00       1         long c10::_maybe_wrap_dim<long>(long, long, bool) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[100]    0.0    0.00    0.00       1         at::TensorBase::size(long) const [100]
+                0.00    0.00       1/3           c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator->() const [50]
+                0.00    0.00       1/1           c10::TensorImpl::size(long) const [102]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::TensorImpl::size(long) const [102]
+[101]    0.0    0.00    0.00       1         c10::TensorImpl::dim() const [101]
+                0.00    0.00       1/2           c10::TensorImpl::matches_policy(c10::TensorImpl::SizesStridesPolicy) const [81]
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::size() const [105]
+-----------------------------------------------
+                0.00    0.00       1/1           at::TensorBase::size(long) const [100]
+[102]    0.0    0.00    0.00       1         c10::TensorImpl::size(long) const [102]
+                0.00    0.00       1/2           c10::TensorImpl::matches_policy(c10::TensorImpl::SizesStridesPolicy) const [81]
+                0.00    0.00       1/1           c10::TensorImpl::dim() const [101]
+                0.00    0.00       1/1           c10::maybe_wrap_dim(long, long, bool) [98]
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::size_at_unchecked(unsigned long) const [104]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::size_at_unchecked(unsigned long) const [104]
+[103]    0.0    0.00    0.00       1         c10::impl::SizesAndStrides::sizes_data() const [103]
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::isInline() const [106]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::TensorImpl::size(long) const [102]
+[104]    0.0    0.00    0.00       1         c10::impl::SizesAndStrides::size_at_unchecked(unsigned long) const [104]
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::sizes_data() const [103]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::TensorImpl::dim() const [101]
+[105]    0.0    0.00    0.00       1         c10::impl::SizesAndStrides::size() const [105]
+-----------------------------------------------
+                0.00    0.00       1/1           c10::impl::SizesAndStrides::sizes_data() const [103]
+[106]    0.0    0.00    0.00       1         c10::impl::SizesAndStrides::isInline() const [106]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [96] __static_initialization_and_destruction_0(int, int) [74] c10::optional<bool>::optional(c10::nullopt_t) [23] __gnu_cxx::new_allocator<long>::max_size() const
+  [44] at::TensorBase::~TensorBase() [75] c10::optTypeMetaToScalarType(c10::optional<caffe2::TypeMeta>) [17] __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator*() const
+  [52] at::rand(c10::ArrayRef<long>, c10::TensorOptions) [76] unsigned short caffe2::TypeMeta::_typeMetaData<float>() [18] __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-(long) const
+  [45] at::Tensor::~Tensor()  [77] caffe2::TypeMeta caffe2::TypeMeta::Make<float>() [24] std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator() const
+  [97] at::matmul(at::Tensor const&, at::Tensor const&) [78] caffe2::TypeMeta::TypeMeta(unsigned short) [94] std::initializer_list<long>::end() const
+  [53] c10::TensorOptions::TensorOptions() [30] __gnu_cxx::new_allocator<long>::allocate(unsigned long, void const*) [42] std::initializer_list<long>::size() const
+  [46] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::reset_() [16] void __gnu_cxx::new_allocator<long>::construct<long, long>(long*, long&&) [40] std::initializer_list<long>::begin() const
+  [47] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::~intrusive_ptr() [8] bool __gnu_cxx::__is_null_pointer<char const>(char const*) [31] std::vector<long, std::allocator<long> >::size() const
+  [98] c10::maybe_wrap_dim(long, long, bool) [13] __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator(long* const&) [25] std::vector<long, std::allocator<long> >::capacity() const
+  [99] long c10::_maybe_wrap_dim<long>(long, long, bool) [79] at::TensorBase::set_requires_grad(bool) const [26] std::vector<long, std::allocator<long> >::max_size() const
+  [48] c10::UndefinedTensorImpl::singleton() [100] at::TensorBase::size(long) const [32] std::_Vector_base<long, std::allocator<long> >::_M_allocate(unsigned long)
+  [54] c10::constexpr_storage_t<caffe2::TypeMeta>::constexpr_storage_t(c10::trivial_init_t) [80] at::Tensor::set_requires_grad(bool) const [33] std::_Vector_base<long, std::allocator<long> >::_M_deallocate(long*, unsigned long)
+  [55] c10::constexpr_storage_t<c10::ScalarType>::constexpr_storage_t(c10::trivial_init_t) [81] c10::TensorImpl::matches_policy(c10::TensorImpl::SizesStridesPolicy) const [34] std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator()
+  [56] c10::constexpr_storage_t<c10::Device>::constexpr_storage_t(c10::trivial_init_t) [101] c10::TensorImpl::dim() const [35] std::allocator_traits<std::allocator<long> >::allocate(std::allocator<long>&, unsigned long)
+  [57] c10::constexpr_storage_t<c10::Layout>::constexpr_storage_t(c10::trivial_init_t) [102] c10::TensorImpl::size(long) const [27] std::allocator_traits<std::allocator<long> >::max_size(std::allocator<long> const&)
+  [58] c10::constexpr_storage_t<bool>::constexpr_storage_t(c10::trivial_init_t) [82] c10::TensorOptions::device_opt() const [19] void std::allocator_traits<std::allocator<long> >::construct<long, long>(std::allocator<long>&, long*, long&&)
+  [59] c10::fromIntArrayRefSlow(c10::ArrayRef<long>) [83] c10::TensorOptions::layout_opt() const [28] std::vector<long, std::allocator<long> >::_S_max_size(std::allocator<long> const&)
+  [60] c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::trivially_copyable_optimization_optional_base() [84] c10::TensorOptions::pinned_memory_opt() const [36] std::vector<long, std::allocator<long> >::_S_relocate(long*, long*, long*, std::allocator<long>&)
+  [61] c10::trivially_copyable_optimization_optional_base<c10::ScalarType>::trivially_copyable_optimization_optional_base() [85] c10::TensorOptions::dtype_opt() const [37] std::vector<long, std::allocator<long> >::_S_do_relocate(long*, long*, long*, std::allocator<long>&, std::integral_constant<bool, true>)
+  [62] c10::trivially_copyable_optimization_optional_base<c10::Device>::trivially_copyable_optimization_optional_base() [50] c10::intrusive_ptr<c10::TensorImpl, c10::UndefinedTensorImpl>::operator->() const [20] std::vector<long, std::allocator<long> >::end()
+  [63] c10::trivially_copyable_optimization_optional_base<c10::Layout>::trivially_copyable_optimization_optional_base() [86] c10::trivially_copyable_optimization_optional_base<caffe2::TypeMeta>::initialized() const [21] std::vector<long, std::allocator<long> >::back()
+  [64] c10::trivially_copyable_optimization_optional_base<bool>::trivially_copyable_optimization_optional_base() [103] c10::impl::SizesAndStrides::sizes_data() const [9] std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag)
+  [65] c10::Device::validate() [104] c10::impl::SizesAndStrides::size_at_unchecked(unsigned long) const [14] long* std::__niter_base<long*>(long*)
+  [66] c10::Device::Device(c10::DeviceType, signed char) [105] c10::impl::SizesAndStrides::size() const [38] long* std::__relocate_a<long*, long*, std::allocator<long> >(long*, long*, long*, std::allocator<long>&)
+  [41] c10::SymInt::check_range(long) [106] c10::impl::SizesAndStrides::isInline() const [39] std::enable_if<std::__is_bitwise_relocatable<long, void>::value, long*>::type std::__relocate_a_1<long, long>(long*, long*, long*, std::allocator<long>&)
+  [49] c10::detail::atomic_refcount_decrement(std::atomic<unsigned long>&) [87] c10::Device::is_cpu() const [10] std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&)
+  [67] c10::ArrayRef<c10::SymInt>::debugCheckNullptrInvariant() [88] c10::ArrayRef<long>::end() const [95] long const* std::end<long>(std::initializer_list<long>)
+  [68] c10::ArrayRef<c10::SymInt>::ArrayRef(c10::SymInt const*, unsigned long) [89] c10::ArrayRef<long>::data() const [29] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [69] c10::ArrayRef<long>::ArrayRef(std::initializer_list<long> const&) [90] c10::ArrayRef<long>::size() const [43] long const* std::begin<long>(std::initializer_list<long>)
+  [70] c10::optional<caffe2::TypeMeta>::optional(c10::nullopt_t) [91] c10::ArrayRef<long>::begin() const [12] long&& std::forward<long>(std::remove_reference<long>::type&)
+  [71] c10::optional<c10::ScalarType>::optional(c10::nullopt_t) [92] c10::optional<caffe2::TypeMeta>::initialized() const [11] std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*)
+  [72] c10::optional<c10::Device>::optional(c10::nullopt_t) [93] c10::optional<caffe2::TypeMeta>::has_value() const [51] std::operator&(std::memory_order, std::__memory_order_modifier)
+  [73] c10::optional<c10::Layout>::optional(c10::nullopt_t) [15] __gnu_cxx::new_allocator<long>::_M_max_size() const [22] operator new(unsigned long, void*)
