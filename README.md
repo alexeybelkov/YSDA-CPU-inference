@@ -1,9 +1,6 @@
 # YSDA-CPU-inference
 ### Quantized inference on CPU (int8 / int4 / mixed precision )      
 The aim of this project is to investigate whether the int8 architecture can provide acceleration compared to the fp16/fp32 architecture (in particular, there must be good INT8 computing structures for this to be profitable)       
-
-### C++ config      
-To be able to compile & run C++ code in **/cpp** folder, you need to add libtorch as in [this guide](https://pytorch.org/cppdocs/installing.html#minimal-example)       
        
 ### Usefull links      
 
