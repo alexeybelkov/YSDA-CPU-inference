@@ -3,25 +3,13 @@
 #include <iostream>
 #include <torch/torch.h>
 
-void see_backtrace() {
-    
-    at::Tensor weight = at::rand({32, 16});
-    weight.set_requires_grad(false);
-    at::Tensor input = at::rand({4, 32});
+int main() {
+    // mm -> mm::respatch -> /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch-build/aten/src/ATen/Operators_3.cpp:3896
+    at::Tensor weight = at::rand({32, 16}, at::requires_grad(false));
+    // weight.set_requires_grad(false);
+    at::Tensor input = at::rand({4, 32}, at::requires_grad(false));
     input.set_requires_grad(false);
     std::cout << "PRE MATMUL\n";
     at::Tensor output = at::matmul(input, weight);
     std::cout << "POST MATMUL\n";
-}
-
-int main() {
-
-    // at::Tensor weight = at::rand({32, 16});
-    // weight.set_requires_grad(false);
-    // at::Tensor input = at::rand({4, 32});
-    // input.set_requires_grad(false);
-
-    // at::Tensor output = at::matmul(input, weight);  // at::linear -> transpose ->  at::matmul // in transpose it just swap
-    // std::cout << output.size(0) << std::endl;
-    see_backtrace();
 }  

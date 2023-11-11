@@ -29,3 +29,4 @@ make
 - [PyTorch Performance Tuning Guide](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html)
 - [PyTorch Numeric Suite](https://pytorch.org/docs/stable/torch.ao.ns._numeric_suite.html) and [guide on it](https://github.com/pytorch/tutorials/blob/main/prototype_source/numeric_suite_tutorial.py)
 - [PyTorch Numeric Suite FX](https://pytorch.org/docs/stable/torch.ao.ns._numeric_suite_fx.html#torch-ao-ns-numeric-suite-fx)
+- [Pareto-Optimal Quantized ResNet Is Mostly 4-bit](https://arxiv.org/abs/2105.03536#:~:text=Quantization%20has%20become%20a%20popular,without%20changing%20the%20network%20size.)

@@ -1,0 +1,9 @@
+strict digraph  {
+"0 /nncf_model_input_0";
+"1 SymmetricQuantizer/symmetric_quantize_0";
+"2 Linear/linear_0";
+"3 /nncf_model_output_0";
+"0 /nncf_model_input_0" -> "1 SymmetricQuantizer/symmetric_quantize_0"  [label="(1, 1, 768) \n0 -> 0", style=solid];
+"1 SymmetricQuantizer/symmetric_quantize_0" -> "2 Linear/linear_0"  [label="(1, 1, 768) \n0 -> 0", style=solid];
+"2 Linear/linear_0" -> "3 /nncf_model_output_0"  [label="(1, 1, 1000) \n0 -> 0", style=solid];
+}
