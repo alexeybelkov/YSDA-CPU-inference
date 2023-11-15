@@ -8,12 +8,13 @@ int main() {
     // -> /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch-build/aten/src/ATen/RegisterCPU.cpp:8640 -> 
     // -> /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/LinearAlgebra.cpp:1383 -> 
     // ->  /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/LinearAlgebra.cpp:1513 -> 
-    // ??? /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/CPUBlas.cpp:161
-    at::Tensor weight = at::rand({32, 16}, at::requires_grad(false));
-    // weight.set_requires_grad(false);
-    at::Tensor input = at::rand({4, 32}, at::requires_grad(false));
-    input.set_requires_grad(false);
+    // ??? /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/CPUBlas.cpp:161 -> 
+    // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/cpu/BlasKernel.cpp:58
+
+    at::Tensor weight = at::rand({64, 256}, at::requires_grad(false));
+    at::Tensor input = at::rand({128, 256}, at::requires_grad(false));
     std::cout << "PRE MATMUL\n";
-    at::Tensor output = at::matmul(input, weight);
+    // at::Tensor output = at::linear(input, weight); // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/cpu/BlasKernel.cpp:277
+    // at::Tensor output = at::matmul(input, weight);
     std::cout << "POST MATMUL\n";
 }  

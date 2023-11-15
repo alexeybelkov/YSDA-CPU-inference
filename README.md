@@ -30,3 +30,10 @@ make
 - [PyTorch Numeric Suite](https://pytorch.org/docs/stable/torch.ao.ns._numeric_suite.html) and [guide on it](https://github.com/pytorch/tutorials/blob/main/prototype_source/numeric_suite_tutorial.py)
 - [PyTorch Numeric Suite FX](https://pytorch.org/docs/stable/torch.ao.ns._numeric_suite_fx.html#torch-ao-ns-numeric-suite-fx)
 - [Pareto-Optimal Quantized ResNet Is Mostly 4-bit](https://arxiv.org/abs/2105.03536#:~:text=Quantization%20has%20become%20a%20popular,without%20changing%20the%20network%20size.)
+
+### Additioanl topic-related papers from experienced researchers
+
+- [Intriguing Properties of Quantization at Scale](https://arxiv.org/abs/2305.19268)
+- [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
+- [Few-Bit Backward: Quantized Gradients of Activation Functions for Memory Footprint Reduction](https://arxiv.org/abs/2202.00441)
+- [And the Bit Goes Down: Revisiting the Quantization of Neural Networks ](https://openreview.net/forum?id=rJehVyrKwH)
