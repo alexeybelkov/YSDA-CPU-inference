@@ -15,7 +15,7 @@ SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g")
 
 include_directories(pytorch-install/include/)
 
-add_executable(pytorch-exec src/quantized_linear.cpp)
+add_executable(pytorch-exec src/benchmark.cpp)
 
 target_link_libraries(pytorch-exec "${TORCH_LIBRARIES}")
 
