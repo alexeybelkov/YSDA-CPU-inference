@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 17)
 project(ysda-cpu-inference)
 
+# set(USE_FBGEMM ON)
+# set(USE_QNNPACK ON)
+# set(USE_MKLDNN ON)
 set(CMAKE_PREFIX_PATH pytorch-install)
 
 find_package(Torch REQUIRED)
