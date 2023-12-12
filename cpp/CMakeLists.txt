@@ -5,17 +5,25 @@ project(ysda-cpu-inference)
 # set(USE_FBGEMM ON)
 # set(USE_QNNPACK ON)
 # set(USE_MKLDNN ON)
-set(CMAKE_PREFIX_PATH pytorch-install)
 
-find_package(Torch REQUIRED)
+
+set(CMAKE_PREFIX_PATH pytorch-install)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS} -g")
 SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -g")
 SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g")
 
 
-include_directories(pytorch-install/include/)
+# set(CMAKE_PREFIX_PATH pytorch-release/pytorch-install)
+# set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 
-add_executable(pytorch-exec src/benchmark.cpp)
+# set(CMAKE_BUILD_TYPE Release)
+
+
+
+include_directories(pytorch-install/include/)
+# include_directories(pytorch-release/pytorch-install/include)
+find_package(Torch REQUIRED)
+add_executable(pytorch-exec src/fbgemm_qlinear.cpp)
 
 target_link_libraries(pytorch-exec "${TORCH_LIBRARIES}")
 

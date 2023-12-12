@@ -27,6 +27,15 @@
         "vector": "cpp",
         "future": "cpp",
         "system_error": "cpp",
-        "fft": "cpp"
+        "fft": "cpp",
+        "format": "cpp",
+        "tuple": "cpp",
+        "*.tcc": "cpp",
+        "memory": "cpp",
+        "istream": "cpp",
+        "functional": "cpp",
+        "variant": "cpp",
+        "locale": "cpp",
+        "thread": "cpp"
     }
 }

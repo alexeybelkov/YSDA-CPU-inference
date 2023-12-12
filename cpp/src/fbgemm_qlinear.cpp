@@ -21,13 +21,15 @@ int main() {
     // x = torch.rand(256, 512)
     // linear = nn.Linear(512, 256).eval()
 
+    at::set_num_interop_threads(1);
+    at::set_num_threads(1);
+
     at::Tensor weight = at::rand({256, 512}, at::requires_grad(false));
     at::Tensor bias = at::rand({256}, at::requires_grad(false));
     at::Tensor input = at::rand({256, 512}, at::requires_grad(false));
 
-    torch::jit::Module fbgemm_linear = torch::jit::load("../../gitignore/fbgemm_linear.pt");
+    torch::jit::Module fbgemm_linear = torch::jit::load("../../gitignore/jit_models/fbgemm_linear_256x512.pt");
     std::vector<torch::jit::IValue> jit_input = {input};
-    std::cout << "PRE LINEAR\n";
     auto out = fbgemm_linear.forward(jit_input);
 
     // https://github.com/pytorch/pytorch/wiki/Introducing-Quantized-Tensor
@@ -50,6 +52,9 @@ int main() {
     // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/quantized/cpu/qlinear.cpp:1034
     // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch-build/aten/src/ATen/RegisterQuantizedCPU.cpp:227
     // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/aten/src/ATen/native/quantized/cpu/qlinear.cpp:37
+
+    // kernel execution
+    // /home/alexey/YSDA/YSDA-CPU-inference/cpp/pytorch/third_party/fbgemm/src/ExecuteKernelU8S8.cc:301
 
 
     // std::cout << "PRE LINEAR\n";
