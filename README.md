@@ -1,7 +1,8 @@
 # YSDA-CPU-inference
 ### Quantized inference on CPU (int8 / int4 / mixed precision )      
 The aim of this project is to investigate whether the int8 architecture can provide acceleration compared to the fp16/fp32 architecture (in particular, there must be good INT8 computing structures for this to be profitable)       
-You may find more info in [project presentation](https://alexeybelkov.github.io/YSDA-CPU-inference/tree/pytorch/Quantized_GEMM.pdf)
+You may find more info in [project presentation](Quantized_GEMM.pdf)
+<!-- You may find more info in [project presentation](https://alexeybelkov.github.io/YSDA-CPU-inference/tree/pytorch/Quantized_GEMM.pdf) -->
 
 ### C++ config      
 In this branch we used directly builded libtorch as in [Building libtorch using CMake](https://github.com/pytorch/pytorch/blob/main/docs/libtorch.rst#building-libtorch-using-cmake)        
@@ -33,6 +34,7 @@ make
 - [Pareto-Optimal Quantized ResNet Is Mostly 4-bit](https://arxiv.org/abs/2105.03536#:~:text=Quantization%20has%20become%20a%20popular,without%20changing%20the%20network%20size.)
 - [Introducing Quantized Tensor](https://github.com/pytorch/pytorch/wiki/Introducing-Quantized-Tensor)
 - [How to optimize GEMM](https://github.com/flame/how-to-optimize-gemm)
+- [Eigen library](https://gitlab.com/libeigen/eigen)
 
 ### Additioanl topic-related papers from experienced researchers
 

@@ -23,7 +23,7 @@ SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -g")
 include_directories(pytorch-install/include/)
 # include_directories(pytorch-release/pytorch-install/include)
 find_package(Torch REQUIRED)
-add_executable(pytorch-exec src/fbgemm_qlinear.cpp)
+add_executable(pytorch-exec src/linear.cpp)
 
 target_link_libraries(pytorch-exec "${TORCH_LIBRARIES}")
 
